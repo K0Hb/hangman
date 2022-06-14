@@ -1,0 +1,2 @@
+hungman:
+	ruby main.rb
