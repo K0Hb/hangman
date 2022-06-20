@@ -1,6 +1,6 @@
 # hungman
 ----
-Эта игруля написана на  [**Ruby**](https://www.ruby-lang.org/en/).Игра [**hangman**](https://en.wikipedia.org/wiki/Hangman_(game)) реализована в рамках консольной утилиты.
+Эта игруля написана на  [**Ruby**](https://www.ruby-lang.org/en/). Игра [**hangman**](https://en.wikipedia.org/wiki/Hangman_(game)) реализована в рамках консольной утилиты.
 
 ## Запуск игры:
 
