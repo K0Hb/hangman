@@ -75,8 +75,6 @@ class Game
   end
 
   def normilized_letters
-    result = @letters.map { |letter| normilize_latter(letter) }
-    result
+    @letters.map { |letter| normilize_latter(letter) }
   end
-  
 end

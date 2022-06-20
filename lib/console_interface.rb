@@ -19,13 +19,13 @@ class ConsoleInterface
   # Выводит в консоль текущее состояние игры, используя данные из экземпляра
   # класса Game (количество ошибок, сколько осталось попыток и т.д.)
   def print_out
-    puts <<~END
+    game_view = <<~HEREDOC
       Слово: #{word_to_show}
       #{figure}
       Ошибки (#{@game.errors_made}): #{errors_to_show}
       У вас осталось ошибок: #{@game.errors_allowed}
-    
-    END
+    HEREDOC
+    puts game_view
 
     if @game.won?
       puts 'Поздравляем, вы выиграли!'
