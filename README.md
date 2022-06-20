@@ -1,4 +1,4 @@
-# hungman
+# Hungman
 ----
 Эта игруля написана на  [**Ruby**](https://www.ruby-lang.org/en/). Игра [**hangman**](https://en.wikipedia.org/wiki/Hangman_(game)) реализована в рамках консольной утилиты.
 
@@ -28,7 +28,4 @@
 РОССИЯ
 ```
 ## Визуализация игровой механики:
-=======
-Простенькая игруля виселица на ruby
-
 [![asciicast](https://asciinema.org/a/4kIxNBfPC9j4NqA1qmgiBNOYL.svg)](https://asciinema.org/a/4kIxNBfPC9j4NqA1qmgiBNOYL)
