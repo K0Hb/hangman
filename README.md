@@ -7,7 +7,7 @@
 
 Установить интерпретатор **Ruby** [установить](https://www.ruby-lang.org/ru/documentation/installation/)
 
-Склонировать репозиторий `git clone https://github.com/K0Hb/hungman.git`
+Склонировать репозиторий
 
 Установить менеджер зависимостей `gem install bundler`
 

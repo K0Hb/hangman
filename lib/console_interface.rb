@@ -2,9 +2,9 @@ require 'colorize'
 
 class ConsoleInterface
   FIGURES =
-    Dir["#{__dir__}/../data/figures/*.txt"].
-    sort.
-    map { |file_name| File.read(file_name) }
+    Dir["#{__dir__}/../data/figures/*.txt"]
+    .sort
+    .map { |file_name| File.read(file_name) }
 
   def initialize(game)
     @game = game

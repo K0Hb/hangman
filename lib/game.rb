@@ -20,9 +20,7 @@ class Game
 
   def letters_to_guess
     @letters.map do |letter|
-      if @user_guesses.include?(normilize_latter(letter))
-        letter
-      end
+      letter if @user_guesses.include?(normilize_latter(letter))
     end
   end
 
@@ -35,9 +33,7 @@ class Game
   end
 
   def play!(letter)
-    if !over? && !@user_guesses.include?(normilize_latter(letter))
-      @user_guesses << normilize_latter(letter)
-    end
+    @user_guesses << normilize_latter(letter) if !over? && !@user_guesses.include?(normilize_latter(letter))
   end
 
   def won?
