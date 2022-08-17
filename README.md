@@ -3,13 +3,15 @@
 Эта игруля написана на  [**Ruby**](https://www.ruby-lang.org/en/). Игра [**hangman**](https://en.wikipedia.org/wiki/Hangman_(game)) реализована в рамках консольной утилиты.
 ## Запуск игры:
 ----
-Необходимо установить интерпретатор **Ruby** [установить](https://www.ruby-lang.org/ru/documentation/installation/)
+Необходимо:
 
-Склонируй репозиторий `git clone https://github.com/K0Hb/hungman.git`
+Установить интерпретатор **Ruby** [установить](https://www.ruby-lang.org/ru/documentation/installation/)
 
-Установка менеджера зависимостей `gem install bundler`
+Склонировать репозиторий `git clone https://github.com/K0Hb/hungman.git`
 
-Установите зависимости `bundle install`
+Установить менеджер зависимостей `gem install bundler`
+
+Установить зависимости `bundle install`
 
 Запуск игры `bundle exec ruby hangman.rb`
 
