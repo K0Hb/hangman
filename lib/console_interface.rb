@@ -1,13 +1,30 @@
 require 'colorize'
 
 class ConsoleInterface
-  FIGURES =
-    Dir["#{__dir__}/../data/figures/*.txt"]
-    .sort
-    .map { |file_name| File.read(file_name) }
 
   def initialize(game)
     @game = game
+  end
+
+  def errors_to_show
+    @game.errors.join(', ')
+  end
+
+  def figure
+    @figures ||= parse_figures
+    @figures[@game.errors_made]
+  end
+
+  def get_input
+    print 'Введите следующую букву: '.colorize(:light_cyan)
+    gets[0].upcase
+  end
+
+  def parse_figures
+    @figures =
+      Dir["#{__dir__}/../data/figures/*.txt"]
+      .sort
+      .map { |file_name| File.read(file_name) }
   end
 
   def print_out
@@ -23,20 +40,8 @@ class ConsoleInterface
     end
   end
 
-  def figure
-    FIGURES[@game.errors_made]
-  end
-
   def word_to_show
     @game.letters_to_guess.map { |letter| letter || '__' }.join(' ')
   end
 
-  def errors_to_show
-    @game.errors.join(', ')
-  end
-
-  def get_input
-    print 'Введите следующую букву: '.colorize(:light_cyan)
-    gets[0].upcase
-  end
 end
