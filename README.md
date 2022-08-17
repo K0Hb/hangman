@@ -5,7 +5,9 @@
 ----
 Необходимо установить интерпретатор **Ruby** [установить](https://www.ruby-lang.org/ru/documentation/installation/)
 Склонируй репозиторий `git clone https://github.com/K0Hb/hungman.git`
-Для запуска игры, наберите комманду `make hungman`
+Установка менеджера зависимостей `gem install bundler`
+Установите зависимости `bundle install`
+Запуск игры `bundle exec ruby hangman.rb`
 ## Как добавить слова в игру:
 ----
 Открой: ```/data/words.txt```
