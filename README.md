@@ -9,11 +9,20 @@
 
 Склонировать репозиторий
 
-Установить менеджер зависимостей `gem install bundler`
+Установить менеджер зависимостей
+```rb
+gem install bundler
+```
 
-Установить зависимости `bundle install`
+Установить зависимости
+```rb
+bundle install
+```
 
-Запуск игры `bundle exec ruby hangman.rb`
+Запуск игры
+```rb
+bundle exec ruby hangman.rb
+```
 
 ## Как добавить слова в игру:
 ----

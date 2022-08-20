@@ -1,7 +1,6 @@
 require 'colorize'
 
 class ConsoleInterface
-
   def initialize(game)
     @game = game
   end
@@ -21,10 +20,9 @@ class ConsoleInterface
   end
 
   def parse_figures
-    @figures =
-      Dir["#{__dir__}/../data/figures/*.txt"]
-      .sort
-      .map { |file_name| File.read(file_name) }
+    @figures = Dir["#{__dir__}/../data/figures/*.txt"]
+               .sort
+               .map { |file_name| File.read(file_name) }
   end
 
   def print_out
@@ -43,5 +41,4 @@ class ConsoleInterface
   def word_to_show
     @game.letters_to_guess.map { |letter| letter || '__' }.join(' ')
   end
-
 end
