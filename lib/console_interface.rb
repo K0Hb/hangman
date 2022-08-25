@@ -22,9 +22,7 @@ class ConsoleInterface
   end
 
   def parse_figures
-    @figures = Dir[PATH_TO_ALL_FIGURES]
-               .sort
-               .map { |file_name| File.read(file_name) }
+    @figures = Dir[PATH_TO_ALL_FIGURES].sort.map { |file_name| File.read(file_name) }
   end
 
   def print_out

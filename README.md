@@ -10,17 +10,17 @@
 Склонировать репозиторий
 
 Установить менеджер зависимостей
-```rb
+```
 gem install bundler
 ```
 
 Установить зависимости
-```rb
+```
 bundle install
 ```
 
 Запуск игры
-```rb
+```
 bundle exec ruby hangman.rb
 ```
 
