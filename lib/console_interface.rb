@@ -12,17 +12,13 @@ class ConsoleInterface
   end
 
   def figure
-    @figures ||= parse_figures
+    @figures ||= Dir[PATH_TO_ALL_FIGURES].sort.map { |file_name| File.read(file_name) }
     @figures[@game.errors_made]
   end
 
   def get_input
     print 'Введите следующую букву: '.colorize(:light_cyan)
     gets[0].upcase
-  end
-
-  def parse_figures
-    @figures = Dir[PATH_TO_ALL_FIGURES].sort.map { |file_name| File.read(file_name) }
   end
 
   def print_out
