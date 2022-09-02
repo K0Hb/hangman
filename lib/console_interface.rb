@@ -1,7 +1,7 @@
 require 'colorize'
 
 class ConsoleInterface
-  PATH_TO_ALL_FIGURES = "#{__dir__}/../data/figures/*.txt"
+  FIGURES = Dir["#{__dir__}/../data/figures/*.txt"].sort.map { |file_name| File.read(file_name) }
 
   def initialize(game)
     @game = game
@@ -12,7 +12,6 @@ class ConsoleInterface
   end
 
   def figure
-    @figures ||= Dir[PATH_TO_ALL_FIGURES].sort.map { |file_name| File.read(file_name) }
     @figures[@game.errors_made]
   end
 
