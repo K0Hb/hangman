@@ -12,15 +12,12 @@ class ConsoleInterface
   end
 
   def figure
-<<<<<<< HEAD
     @figures ||= Dir[PATH_TO_ALL_FIGURES].sort.map { |file_name| File.read(file_name) }
     begin
       @figures[@game.errors_made]
     rescue NoMethodError
       abort "Не найдены файлы для прорисовки фигур по пути #{PATH_TO_ALL_FIGURES}"
     end
-=======
->>>>>>> b0fe67fd58192e00dcf7f6cb739ae6e14c6ffd48
   end
 
   def get_input
