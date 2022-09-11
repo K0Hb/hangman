@@ -1,10 +1,11 @@
 require 'colorize'
 
 class ConsoleInterface
-  FIGURES = Dir["#{__dir__}/../data/figures/*.txt"].sort.map { |file_name| File.read(file_name) }
+  FIGURES_PATH = "#{__dir__}/../data/figures/*.txt"
 
   def initialize(game)
     @game = game
+    @figures = figures
   end
 
   def errors_to_show
@@ -12,12 +13,11 @@ class ConsoleInterface
   end
 
   def figure
-    @figures ||= Dir[PATH_TO_ALL_FIGURES].sort.map { |file_name| File.read(file_name) }
-    begin
-      @figures[@game.errors_made]
-    rescue NoMethodError
-      abort "Не найдены файлы для прорисовки фигур по пути #{PATH_TO_ALL_FIGURES}"
-    end
+    @figures[@game.errors_made]
+  end
+
+  def figures
+    @figures ||= Dir[FIGURES_PATH].sort.map { |file_name| File.read(file_name) }
   end
 
   def get_input
