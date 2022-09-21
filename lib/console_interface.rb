@@ -2,12 +2,12 @@ require 'colorize'
 
 class ConsoleInterface
   FIGURES_PATH = "#{__dir__}/../data/figures/*.txt"
+  FIGUERS = Dir[FIGURES_PATH].sort.map { |file_name| File.read(file_name) }
 
   attr_reader :figures
 
   def initialize(game)
     @game = game
-    @figures = read_figures
   end
 
   def errors_to_show
@@ -15,7 +15,7 @@ class ConsoleInterface
   end
 
   def figure
-    @figures[@game.errors_made]
+    FIGUERS[@game.errors_made]
   end
 
   def get_input
@@ -38,11 +38,5 @@ class ConsoleInterface
 
   def word_to_show
     @game.letters_to_guess.map { |letter| letter || '__' }.join(' ')
-  end
-
-  private
-
-  def read_figures
-    Dir[FIGURES_PATH].sort.map { |file_name| File.read(file_name) }
   end
 end
